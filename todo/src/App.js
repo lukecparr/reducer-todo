@@ -8,7 +8,7 @@ const initialState = [
     {
       title: 'Put components in place',
       id: 6842135498,
-      completed: false
+      completed: true
     },
     {
       title: 'Render elements on screen',

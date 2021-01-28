@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ADD_TODO } from '../reducers/todoReducer';
+import { ADD_TODO, CLEAR_ITEMS } from '../reducers/todoReducer';
 import './NewTodoInput.css'
 
 const NewTodoInput = (props) => {
@@ -26,7 +26,10 @@ const NewTodoInput = (props) => {
 					onChange={handleChanges}
 					value={newTodo}
 				/>
-				<button type="submit">Add Todo</button>
+				<div>
+					<button type="submit">Add Todo</button>
+					<button type="button" onClick={() => {dispatch({type: CLEAR_ITEMS})}}>Clear</button>
+				</div>
 			</form>
 		</>
 	)

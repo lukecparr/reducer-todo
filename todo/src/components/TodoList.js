@@ -8,7 +8,7 @@ const { todos, dispatch } = props;
 
 	return(
 		<div className='todoContainer'>
-			{todos.map((item) => <Todo item={item} />)}
+			{todos.map((item) => <Todo item={item} dispatch={dispatch}/>)}
 			<NewTodoInput dispatch={dispatch}/>
 		</div>
 	)
