@@ -1,0 +1,16 @@
+p {
+	margin: .5rem;
+}
+
+.item {
+	color: #282c34;
+	border: black solid 1px;
+	background-color: blanchedalmond;
+	margin: .5rem;
+	width: 20rem;
+	font-weight: bold;
+}
+
+.completed {
+	text-decoration: line-through;
+}

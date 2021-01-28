@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useReducer } from 'react';
+import TodoList from './components/TodoList';
+import todoReducer from './reducers/todoReducer';
 import './App.css';
 
+
+const initialState = [
+    {
+      title: 'Put components in place',
+      id: 6842135498,
+      completed: false
+    },
+    {
+      title: 'Render elements on screen',
+      id: 1598746513,
+      completed: false
+    },
+    {
+      title: 'Get reducer working',
+      id: 8165412695,
+      completed: false
+    }
+  ];
+
 function App() {
+  const [state, dispatch] = useReducer(todoReducer, initialState)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Welcome to my Todo App!</h2>
+        <TodoList todos={state} dispatch={dispatch}/>
     </div>
   );
 }
